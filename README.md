@@ -18,11 +18,10 @@ _(Put your project plan here. It could be pseudocode, an outline-style developme
 
 For a software developer, what are the benefits of good unit tests? Are there any drawbacks to writing unit tests?
 
-_(Put your reflection answer here.)_
+Unit test allows you to test you code to see if it works, drawbacks its annoying
 
 ### Advanced Level Only
 
 What different approaches or techniques did you consider when planning your implementation? What were the advantages and disadvantages of those alternatives?
 
 _(Put your reflection answer here.)_
-
