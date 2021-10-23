@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 
-        <meta name="description" content="Kenzie" />
-        <meta name="author" content="Kenzie" />
-        <meta name="keywords" content="Kenzie" />
+		<meta name="description" content="Kenzie" />
+		<meta name="author" content="Kenzie" />
+		<meta name="keywords" content="Kenzie" />
 
-        <!-- Title Page -->
-        <title>Dates and Times Challenge</title>
+		<!-- Title Page -->
+		<title>Dates and Times Challenge</title>
 
-        <!-- CSS -->
-        <link href="style.css" rel="stylesheet" media="all" />
-    </head>
+		<!-- CSS -->
+		<link href="style.css" rel="stylesheet" media="all" />
+	</head>
 
-    <body>
-        <script src="code.js"></script>
-    </body>
+	<body>
+		<main>
+			<div class="stopwatch">
+				<div id="controls">
+					<button id="start">Start</button>
+					<button id="stop">Stop</button>
+					<button id="reset">Reset</button>
+				</div>
+				<div id="display">
+					<span id="minutes">00</span><span id="seconds">00</span
+					><span id="milliseconds">000</span>
+				</div>
+			</div>
+			<div id="container"></div>
+		</main>
+		<script src="code.js"></script>
+		<script src="advance.js"></script>
+	</body>
 </html>

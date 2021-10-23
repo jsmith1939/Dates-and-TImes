@@ -24,13 +24,14 @@ console.assert(
 	Object.prototype.toString.call(timeStamp()) === '[object Number]'
 );
 
-function getDay() {
-	return myDateObj().getDay();
+function getDay(week) {
+	return week[myDateObj().getDay()];
 }
-console.assert(typeof getDay() === 'number');
-console.assert(typeof week[getDay()] === 'string');
+console.log(getDay(week));
+console.assert(typeof getDay(week) !== 'undefined');
+console.assert(typeof getDay(week) === 'string');
 
-/////////////////////// Intermediate Challenge ////////////////////////////
+////////////////////////// Intermediate Challenge ////////////////////////////
 
 function date(dateObj) {
 	let month = dateObj.getMonth() + 1;
@@ -43,17 +44,30 @@ function date(dateObj) {
 	return `${month}/${date}/${year} - ${hour}:${mins}${timeOfDay}`;
 }
 console.log(date(new Date()));
+console.assert(typeof date(new Date()) === 'string');
+console.assert(typeof date(new Date()) !== 'undefined');
 
 function daysApart(date1, date2) {
 	const diffTime = Math.abs(date2 - date1);
 	const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-	return diffDays + ' days';
+	if (diffDays === 0) {
+		return 'Same day';
+	} else if (diffDays === 1) {
+		return 'Previous day';
+	} else {
+		return diffDays + ' days ago';
+	}
 }
-console.log(
+
+console.assert(
 	daysApart(
 		new Date('February 3, 2003 03:00:00'),
 		new Date('March 1, 2003 14:50:00')
-	)
+	) === '27 days ago'
 );
-
-///////////////////////// Advance Challenge: /////////////////////////////////
+console.assert(
+	daysApart(
+		new Date('February 3, 2003 03:00:00'),
+		new Date('February 3, 2003 03:00:00')
+	) === 'Same day'
+);

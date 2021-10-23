@@ -1,1 +1,37 @@
 /* Write your CSS here */
+/* Russel livermore helped with this code */
+.main {
+	justify-content: center;
+}
+.stopwatch {
+	justify-content: center;
+	width: 300px;
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 10px;
+	box-shadow: 4px 8px #151c75;
+}
+#controls {
+	display: flex;
+}
+#start,
+#stop,
+#reset {
+	flex-grow: 1;
+	background-color: white;
+	border-radius: 25px;
+	color: #151c75;
+	border: 2px solid #151c75;
+}
+#display {
+	display: flex;
+}
+#minutes,
+#seconds,
+#milliseconds {
+	flex-grow: 1;
+	margin-top: 10px;
+}
+#container {
+	margin-top: 30px;
+}
