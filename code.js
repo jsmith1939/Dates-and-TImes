@@ -1,14 +1,5 @@
 ////////////////////////////////Basic Challenge///////////////////////////////
 //////////////////////////////// Your code here //////////////////////////////
-let week = [
-	'Sunday',
-	'Monday',
-	'Tuesday',
-	'Wednesday',
-	'Thursday',
-	'Friday',
-	'Saturday',
-];
 
 function myDateObj() {
 	return new Date();
@@ -24,12 +15,22 @@ console.assert(
 	Object.prototype.toString.call(timeStamp()) === '[object Number]'
 );
 
-function getDay(week) {
-	return week[myDateObj().getDay()];
+function getDay(dateObj) {
+	let week = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	];
+	return week[dateObj.getDay()];
 }
-console.log(getDay(week));
-console.assert(typeof getDay(week) !== 'undefined');
-console.assert(typeof getDay(week) === 'string');
+let summonDateObj = new Date('May 9, 1999');
+console.assert(getDay(summonDateObj) === 'Sunday');
+console.assert(typeof getDay(summonDateObj) !== 'undefined');
+console.assert(typeof getDay(summonDateObj) === 'string');
 
 ////////////////////////// Intermediate Challenge ////////////////////////////
 

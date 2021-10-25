@@ -10,7 +10,7 @@ let count = null;
 
 document.querySelector('#start').addEventListener('click', () => {
 	clearInterval(count);
-	count = setcount(startWatch, 10);
+	count = setInterval(startWatch, 10);
 });
 document.querySelector('#stop').addEventListener('click', () => {
 	clearInterval(count);
